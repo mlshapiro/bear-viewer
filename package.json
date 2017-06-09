@@ -1,0 +1,8 @@
+{
+  "name": "bear-viewer",
+  "version": "0.0.1",
+  "description": "Cross platform notes viewer for bear notes app",
+  "repository": "https://github.com/mlshapiro/bear-viewer.git",
+  "author": "Marc Shapiro",
+  "license": "UNLICENSED"
+}
