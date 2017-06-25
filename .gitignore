@@ -5,3 +5,8 @@ node_modules/
 # IDE
 *.sublime-project
 *.sublime-workspace
+
+# build files
+www/index.css
+www/build.js
+www/build.js.map
