@@ -6,9 +6,8 @@ Cross platform notes viewer for Bear notes app
 
 Requires:
 
-- Node > 6
-- `yarn` package manager
-    - `npm install -g yarn`
+- Node > 6, npm > 3
+- `yarn` package manager (`npm install -g yarn`)
 
 ```
 yarn install
@@ -30,3 +29,4 @@ yarn run build
 ```
 
 - Build will copy `index.html` and the `assets/` directory from `src/` to `www/`
+- Stylus is compiled into css by Vue components
