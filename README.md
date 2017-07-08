@@ -29,8 +29,4 @@ Production
 yarn run build
 ```
 
-or to view the app
-
-```
-yarn run serve
-```
+- Build will copy `index.html` and the `assets/` directory from `src/` to `www/`
