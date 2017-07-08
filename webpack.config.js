@@ -45,7 +45,7 @@ module.exports = {
     ]
   },
 
-  // required to run the "compliler" in dev mode
+  // required to run the "compiler" in dev mode
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'

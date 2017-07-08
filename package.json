@@ -5,31 +5,36 @@
   "repository": "https://github.com/mlshapiro/bear-viewer.git",
   "author": "Marc Shapiro",
   "license": "UNLICENSED",
+  "engines": {
+    "node": ">6",
+    "npm": ">3"
+  },
   "devDependencies": {
     "babel-core": "6.25.0",
     "babel-loader": "7.0.0",
     "babel-preset-env": "1.5.2",
+    "concurrently": "3.5.0",
     "cross-env": "5.0.1",
     "css-loader": "0.28.4",
     "file-loader": "0.11.2",
     "live-server": "1.2.0",
+    "onchange": "3.2.1",
     "shx": "0.2.2",
     "style-loader": "0.18.2",
     "stylus": "0.54.5",
+    "stylus-loader": "3.0.1",
     "vue-loader": "12.2.1",
     "vue-template-compiler": "2.3.4",
     "webpack": "2.6.1",
     "webpack-dev-server": "2.4.5"
   },
   "scripts": {
-    "style": "stylus src/index.styl --out www",
-    "webpack.dev": "cross-env NODE_ENV=development webpack-dev-server --content-base www/ --open --hot",
+    "serve.www": "live-server --open=\"www/index.html\" --watch=\"www\" --ignore=\"www/assets, **/*.json, **/*.css, **/*.styl\" ",
+    "webpack.dev": "cross-env NODE_ENV=development webpack-dev-server --content-base src/ --open --hot",
     "webpack.prod": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "build.copy": "shx cp -r src/assets www/assets && shx cp src/index.html www/index.html",
-
-    "build": "npm run build.copy && npm run style && npm run webpack.prod",
-    "preserve": "npm run build",
-    "serve": "live-server --open=\"www/index.html\" --watch=\"www\" --ignore=\"www/assets, **/*.json, **/*.css, **/*.styl\" "
+    "dev": "yarn run webpack.dev",
+    "build": "yarn run build.copy && yarn run webpack.prod"
   },
   "dependencies": {
     "bootstrap-vue": "0.16.1",

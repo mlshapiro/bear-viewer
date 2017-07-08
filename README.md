@@ -14,3 +14,23 @@ Requires:
 yarn install
 ```
 
+
+## Build
+
+Development
+
+```
+yarn run dev
+```
+
+Production
+
+```
+yarn run build
+```
+
+or to view the app
+
+```
+yarn run serve
+```

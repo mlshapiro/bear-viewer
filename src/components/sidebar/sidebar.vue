@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar">
+  <div class="sidebar block">
     <div v-for="item of nav">
       {{icon}} {{item}}
     </div>
@@ -35,5 +35,11 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="stylus" scoped>
+@import "../../theme.styl"
+
+.sidebar
+  background-color: $color
+  max-width: 35%
+  
 </style>
