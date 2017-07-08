@@ -2,7 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './www/index.js',                    // root .js file
+  entry: './src/index.js',                    // root .js file
   output: {
     path: path.resolve(__dirname, './www'),   // full output app in `/www` directory
     filename: 'build.js'                      // full single file app

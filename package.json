@@ -13,7 +13,8 @@
     "css-loader": "0.28.4",
     "file-loader": "0.11.2",
     "live-server": "1.2.0",
-    "style-loader": "^0.18.2",
+    "shx": "0.2.2",
+    "style-loader": "0.18.2",
     "stylus": "0.54.5",
     "vue-loader": "12.2.1",
     "vue-template-compiler": "2.3.4",
@@ -21,14 +22,18 @@
     "webpack-dev-server": "2.4.5"
   },
   "scripts": {
-    "style": "stylus www/index.styl",
-    "serve": "live-server --open=\"www/index.html\" --watch=\"www\" --ignore=\"www/assets, **/*.json, **/*.css, **/*.styl\" ",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --content-base www/ --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "style": "stylus src/index.styl --out www",
+    "webpack.dev": "cross-env NODE_ENV=development webpack-dev-server --content-base www/ --open --hot",
+    "webpack.prod": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "build.copy": "shx cp -r src/assets www/assets && shx cp src/index.html www/index.html",
+
+    "build": "npm run build.copy && npm run style && npm run webpack.prod",
+    "preserve": "npm run build",
+    "serve": "live-server --open=\"www/index.html\" --watch=\"www\" --ignore=\"www/assets, **/*.json, **/*.css, **/*.styl\" "
   },
   "dependencies": {
-    "bootstrap-vue": "^0.16.1",
-    "vue": "  2.3.4",
+    "bootstrap-vue": "0.16.1",
+    "vue": "2.3.4",
     "vue-router": "2.6.0"
   }
 }
