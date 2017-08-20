@@ -37,7 +37,7 @@
     "build": "yarn run build.copy && yarn run webpack.prod"
   },
   "dependencies": {
-    "bootstrap-vue": "0.16.1",
+    "bootstrap-vue": "0.22.1",
     "vue": "2.3.4",
     "vue-router": "2.6.0"
   }
