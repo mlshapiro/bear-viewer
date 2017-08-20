@@ -20,12 +20,19 @@ module.exports = {
         exclude: /node_modules/
       },
 
+      // styles
       {
         test: /\.css$/,
         use: [
           { loader: "style-loader" },
           { loader: "css-loader" }
         ],
+      },
+
+      // fonts
+      {
+        test: /\.(ttf|eot|woff|woff2)$/,
+        loader: 'file-loader'
       },
 
       // all binary files should used the file loader

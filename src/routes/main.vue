@@ -1,9 +1,21 @@
 <template>
 
-  <div>
-    <sidebar></sidebar>
-    <note-list></note-list>
-    <note></note>
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-sm-12 col-md-6 col-lg-2">
+        <sidebar></sidebar>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-2">
+        <note-list></note-list>
+      </div>
+
+      <div class="col-md-12 col-lg-8">
+        <note></note>
+      </div>
+
+    </div>
   </div>
 
 </template>
@@ -27,6 +39,6 @@ export default {
 
 <style lang="stylus" scoped>
 
-@import '../theme.styl'
-
+@import '../assets/styles/theme.styl'
+  
 </style>

@@ -9,23 +9,28 @@ Requires:
 - Node > 6, npm > 3
 - `yarn` package manager (`npm install -g yarn`)
 
+## Quick Start
+
+- Clone this repository
+- Install node dependencies
+
 ```
-yarn install
+$ yarn install
 ```
 
 
 ## Build
 
-Development
+To run a development server:
 
 ```
-yarn run dev
+$ yarn run dev
 ```
 
-Production
+To build the app for production:
 
 ```
-yarn run build
+$ yarn run build
 ```
 
 - Build will copy `index.html` and the `assets/` directory from `src/` to `www/`

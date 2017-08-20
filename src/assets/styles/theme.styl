@@ -1,14 +1,38 @@
-
 //---------------------
 // Import all top level .styl files here
 // compiled css will override bootstrap
 // Order DOES matter - later styles will override previous ones
 //---------------------
 
-
 // variables for use around the app. 
 // Must be imported into each component with @import ..(relative-path)/theme.styl
 $color = #222222
+$black = #2E3235
+$white = #FBFBFB
+$red = #DB4D52
+$grey = #CFCFCF
+$darkgrey = #A0A0A0
+$darkestgrey = #555555
+
+// base
+body {
+    overflow-x: hidden;
+}
+h1, h2 {
+  font-weight: normal;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+
 
 // classes that can be reused in components
 .block 
